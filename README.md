@@ -14,7 +14,7 @@ as well as configure jira and confluence
 
 # Clone the Repository:
 - ```git clone https://github.com/talvinisky/Methoda-ha.git```
-- ```cd Methoda-ha``
+- ```cd Methoda-ha```
 
 # Deploy the setup 
 - ```Docker-compose up -d```
