@@ -9,3 +9,14 @@ I wasnt able to create a web hook because the git webhooks dont support using a 
 so you will need to create it yourself inorder to see the project work in its fullest 
 as well as configure jira and confluence
 
+# In order to use this project please keep make sure you have a docker daemon installed 
+
+
+# Clone the Repository:
+- ```git clone https://github.com/talvinisky/Methoda-ha.git```
+- ```cd Methoda-ha``
+
+# Deploy the setup 
+- ```Docker-compose up -d```
+
+
