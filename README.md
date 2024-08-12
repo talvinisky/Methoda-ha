@@ -1,0 +1,11 @@
+# Methoda Homework Assignment 
+
+### This project was done as a part of my application process to Methoda.
+### This project aims to deploy Jira,Confluence and jenkins using docker-compose  
+### And leverage Jenkins to automate the process of moving Jira issues to solved when git merger happends
+
+# Please keep in mind:
+I wasnt able to create a web hook because the git webhooks dont support using a url like "Localhost:8080"
+so you will need to create it yourself inorder to see the project work in its fullest 
+as well as configure jira and confluence
+
