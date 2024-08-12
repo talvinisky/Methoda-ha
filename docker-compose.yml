@@ -41,9 +41,6 @@ services:
     volumes:
       - confluence_data:/var/atlassian/application-data/confluence
 
-
-
-
   jenkins:
     image: jenkins/jenkins:lts
     container_name: jenkins
@@ -53,8 +50,10 @@ services:
     environment:
       - JENKINS_USER=admin
       - JENKINS_PASS=admin_password
+      - CASC_JENKINS_CONFIG=/var/jenkins_home/casc_configs/casc.yaml # Path to Jenkins Configuration as Code file
     volumes:
       - jenkins_home:/var/jenkins_home
+      - casc.yaml
 
 volumes:
   jira_data:
