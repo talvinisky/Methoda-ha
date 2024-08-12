@@ -1,8 +1,8 @@
 #!/bin/bash
 
 # Set Jira and Confluence URLs
-JIRA_URL="http://jira.example.com"
-CONFLUENCE_URL="http://confluence.example.com"
+JIRA_URL="http://localhost:8080"
+CONFLUENCE_URL="http://localhost:8090"
 
 # Jira admin credentials
 JIRA_USER="jira_admin"
