@@ -3,7 +3,7 @@
 # Load Jira URL, username, and API token from secrets.sh
 source ./secrets.sh
 
-# Sample environment variable (you can set this manually or from a CI system)
+# Sample environment variable 
 GIT_BRANCH="feature/PROJECT-123-some-feature"
 
 # Extract Jira issue key from the branch name
@@ -12,12 +12,12 @@ jiraKey=$(echo $GIT_BRANCH | grep -oE "([A-Z]+-[0-9]+)") # We assume in this ins
 if [ -n "$jiraKey" ]; then
     echo "Jira Issue Key: $jiraKey"
 
-    # Retrieve the available transitions for the Jira issue
+    # Retriving the available transitions for the Jira issue
     transitionsResponse=$(curl -s -u "$JIRA_USERNAME:$JIRA_API_TOKEN" -X GET \
         -H "Accept: application/json" \
         "$JIRA_URL/issue/$jiraKey/transitions")
 
-    # Parse the response to find the transition ID for 'Done'
+    # Parsing  the response to find the transition ID for 'Done'
     doneTransitionId=$(echo "$transitionsResponse" | jq -r '.transitions[] | select(.name == "Done") | .id')
 
     if [ -n "$doneTransitionId" ]; then
